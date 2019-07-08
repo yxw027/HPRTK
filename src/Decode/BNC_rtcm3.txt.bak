@@ -1,0 +1,17 @@
+BNC                           RTK
+
+GETBITS(i, 16)
+i <<= 4;                      toc
+eph._TOC.set(i*1000);
+
+_clock_driftrate              f2
+_clock_drift                  f1
+_clock_bias                   f0
+_Delta_n                      deln
+
+GETBITS(i, 16)
+i <<= 4;
+eph._TOEsec = i;              toes
+bncTime t;
+t.set(i*1000);
+
