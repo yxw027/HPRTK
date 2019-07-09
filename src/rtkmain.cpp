@@ -21,7 +21,7 @@ int rtkmain(int argc,char* argv[]){
 	cout << "You can press some keys to stop process.\n";
 	cin >>stopflag;
 
-  rtkpro.rtksvrstop(msg);
+	rtkpro.rtksvrstop(msg);
 
 	return 1;
 }
