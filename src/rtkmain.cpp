@@ -6,7 +6,7 @@
 
 int rtkmain(int argc,char* argv[]){
 	string optfile=argv[1];
-	char stopflag='G';
+	string stopflag="Go!";
 	char *msg[3]={0};
 
 	/* processing options */
@@ -18,11 +18,10 @@ int rtkmain(int argc,char* argv[]){
 	rtkpro.rtksvrini(&option);
 	rtkpro.rtksvrstart();
 
-	while (stopflag!='s'&& stopflag!='S'){
-		if (_kbhit()) stopflag=_getch();
-		sleepms(1000);
-	}
-	rtkpro.rtksvrstop(msg);
+	cout << "You can press some keys to stop process.\n";
+	cin >>stopflag;
+
+  rtkpro.rtksvrstop(msg);
 
 	return 1;
 }
