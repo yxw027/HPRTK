@@ -4,7 +4,6 @@
 #include "GNSS/rtkpro.h"
 #include "BaseFunction/basefunction.h"
 
-/* git branch test */
 int rtkmain(int argc,char* argv[]){
 	string optfile=argv[1];
 	string stopflag="Go!";
